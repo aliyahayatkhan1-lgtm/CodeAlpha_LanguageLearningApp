@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🌍 Language Learning App</h1>
+            <button id="darkModeBtn">🌙 Dark Mode</button>
+        </header>
+
+        <div class="tabs">
+            <button onclick="showSection('vocabulary')">Vocabulary</button>
+            <button onclick="showSection('grammar')">Grammar</button>
+            <button onclick="showSection('quiz')">Quiz</button>
+        </div>
+
+        <section id="vocabulary" class="section active">
+
+            <h2>Vocabulary Flashcards</h2>
+
+            <div class="flashcard">
+                <h3 id="hindiWord">नमस्ते</h3>
+                <p id="englishWord">Hello</p>
+
+                <button onclick="speakWord()">🔊 Pronounce</button>
+                <button onclick="nextCard()">Next Word</button>
+            </div>
+
+        </section>
+
+        <section id="grammar" class="section">
+
+            <h2>Basic Grammar Lessons</h2>
+
+            <div class="lesson">
+
+                <h3>Present Tense</h3>
+
+                <p>
+                    I eat food.
+                </p>
+
+                <p>
+                    मैं खाना खाता हूँ।
+                </p>
+
+            </div>
+
+            <div class="lesson">
+
+                <h3>Past Tense</h3>
+
+                <p>
+                    I ate food.
+                </p>
+
+                <p>
+                    मैंने खाना खाया।
+                </p>
+
+            </div>
+
+        </section>
+
+        <section id="quiz" class="section">
+
+            <h2>Vocabulary Quiz</h2>
+
+            <h3 id="quizQuestion"></h3>
+
+            <input type="text" id="quizAnswer" placeholder="Type English Meaning">
+
+            <button onclick="checkAnswer()">
+                Submit
+            </button>
+
+            <p id="result"></p>
+
+            <h3>Score:
+                <span id="score">0</span>
+            </h3>
+
+        </section>
+
+        <div class="progress-box">
+
+            <h3>Learning Progress</h3>
+
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
